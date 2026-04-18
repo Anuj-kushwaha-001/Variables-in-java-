@@ -1,27 +1,41 @@
 import java.util.*;
 
-// Average of 3 numbers
-
-// public class JavaBasic {
-//     public static void main(String args[]) {
-//         Scanner sc = new Scanner(System.in);
-//        int  A = sc.nextInt();
-//        int B = sc.nextInt();
-//        int C = sc.nextInt();
-//        int average = (A + B + C) / 3;
-//        System.out.println("Average: " + average);
-
-//     }
-// }
-
-// Area of square
-
 public class JavaBasic {
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       System.out.print("Enter a : ");
+       int a = sc.nextInt();
+         System.out.print("Enter b : ");
+         int b = sc.nextInt();
+            System.out.print("Enter operator : ");
+         char operator = sc.next().charAt(0);
 
-  public static void main(String args[]) {
-        Scanner sc = new Scanner (System.in);
-        int side = sc.nextInt();
-        int area = side * side;
-        System.out.println("Area of square: " + area);
+         switch(operator) {
+             case '+':
+                 System.out.println(a + b);
+                 break;
+             case '-':
+                 System.out.println(a - b);
+                 break;
+             case '*':
+                 System.out.println(a * b);
+                 break;
+             case '/':
+                 if (b != 0) {
+                     System.out.println(a / b);
+                 } else {
+                     System.out.println("Cannot divide by zero");
+                 }
+                 break;
+            case '%':
+                 if (b != 0) {
+                     System.out.println(a % b);
+                 } else {
+                     System.out.println("Cannot divide by zero");
+                 }
+                 break;
+             default:
+                 System.out.println("Invalid operator");
+         }
     }
 }
